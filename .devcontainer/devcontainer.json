@@ -1,0 +1,24 @@
+{
+	"name": "Arch Linux",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VERSION": "latest",
+			"USERNAME": "vscode"
+		},
+	"context": ".."
+	},
+	"shutdownAction": "stopContainer",
+	"workspaceFolder": "/workspace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"remoteEnv": {
+	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	"extensions": [
+		"rust-lang.rust-analyzer"
+	],
+	"settings": {
+		"rust-client.rustupPath": "/home/vscode/.cargo/bin/rustup"
+	},
+	"remoteUser": "vscode"
+}
