@@ -1,8 +1,11 @@
 # Rust development environment for VSCode
 
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+
 This template provides a Rust development environment for Visual Studio Code. The development container is based on the Arch Linux image.
 
 ## Getting started
+
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
 2. Install [Docker](https://www.docker.com/)
 3. In VSCode go to *Extensions* and install the *Dev Containers* extension
