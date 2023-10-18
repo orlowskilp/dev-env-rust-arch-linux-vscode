@@ -25,6 +25,8 @@
 				"tamasfe.even-better-toml",
 				"DavidAnson.vscode-markdownlint",
 				"mhutchie.git-graph",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
 				"GitHub.vscode-github-actions"
 			]
 		}
