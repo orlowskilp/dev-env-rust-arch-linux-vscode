@@ -24,6 +24,7 @@
 				"vadimcn.vscode-lldb",
 				"tamasfe.even-better-toml",
 				"DavidAnson.vscode-markdownlint",
+				"mhutchie.git-graph",
 				"GitHub.vscode-github-actions"
 			]
 		}
