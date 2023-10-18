@@ -10,6 +10,8 @@ RUN useradd -ms /bin/bash ${USERNAME}
 RUN pacman -Suy --noconfirm \
     git \
     gcc \
+# Install Docker CLI
+    docker \
 # Install sudo for dev container updating and debugging
     sudo && \
     pacman -Scc

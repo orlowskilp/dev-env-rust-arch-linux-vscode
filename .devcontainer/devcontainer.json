@@ -27,7 +27,8 @@
 				"mhutchie.git-graph",
 				"GitHub.copilot",
 				"GitHub.copilot-chat",
-				"GitHub.vscode-github-actions"
+				"GitHub.vscode-github-actions",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},
@@ -36,6 +37,10 @@
 		"--security-opt",
 		"seccomp=unconfined"
 	],
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
 	"remoteUser": "vscode",
-	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	"postStartCommand": "sudo chmod 777 /var/run/docker.sock"
 }
