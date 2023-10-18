@@ -21,12 +21,15 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > ~/install-rust.s
     /root/.cargo/bin/rustup component add rust-src --toolchain stable-x86_64-unknown-linux-gnu && \
     /root/.cargo/bin/rustup component add rust-analyzer --toolchain stable-x86_64-unknown-linux-gnu
 # Move files to user directory
-RUN cp -r ~/.cargo /home/${USERNAME} && \
+RUN mv ~/.cargo /home/${USERNAME} && \
     chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}/.cargo && \
-    cp -r ~/.rustup /home/${USERNAME} && \
+    mv ~/.rustup /home/${USERNAME} && \
     chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}/.rustup && \
+    mv ~/.profile /home/${USERNAME} && \
+    chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}/.profile && \
     echo "PATH=$PATH:~/.cargo/bin" >> /home/${USERNAME}/.bash_profile && \
-    echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+    echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    rm ~/install-rust.sh
 # Set run as user
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}

@@ -10,9 +10,9 @@
 	},
 	"shutdownAction": "stopContainer",
 	"workspaceFolder": "/workspace",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,consistency=cached",
 	"remoteEnv": {
-	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	},
 	"customizations": {
 		"vscode": {
@@ -21,6 +21,8 @@
 			},
 			"extensions": [
 				"rust-lang.rust-analyzer",
+				"vadimcn.vscode-lldb",
+				"tamasfe.even-better-toml",
 				"GitHub.vscode-github-actions"
 			]
 		}
@@ -30,5 +32,6 @@
 		"--security-opt",
 		"seccomp=unconfined"
 	],
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
