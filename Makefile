@@ -1,6 +1,6 @@
 # Build the library with the specified tool chain. Defaults to x86_64-unknown-linux-gnu
 .PHONY: build
-build: format lint
+build:
 	cargo build --release
 
 # Build documentation for the library
