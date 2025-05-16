@@ -1,6 +1,7 @@
 # Rust development environment for VSCode
 
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+[![Rust dev env verification](https://github.com/orlowskilp/dev-env-rust-arch-linux-vscode/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/orlowskilp/dev-env-rust-arch-linux-vscode/actions/workflows/pipeline.yml)
 
 This template provides a Rust development environment for Visual Studio Code. The development container is based on the Arch Linux image.
 
