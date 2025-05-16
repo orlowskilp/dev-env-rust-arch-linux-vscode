@@ -1,1 +1,4 @@
 target
+
+# Delete this ignore rule if you're building a binary crate
+Cargo.lock
