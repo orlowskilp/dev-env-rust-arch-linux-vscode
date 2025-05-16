@@ -1,0 +1,28 @@
+name: Rust dev environment verification
+
+on:
+  push:
+    branches:
+      - master
+      - ci/*
+    tags:
+      # You may want to add axiomatic labels like alpha, beta, rc, et al.
+      - v[0-9]+.[0-9]+.[0-9]+
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    name: Run checks on formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v4
+
+      - name: Check TOML
+        uses: dprint/check@v2.2
+
+      - name: Lint code
+        run: make lint
