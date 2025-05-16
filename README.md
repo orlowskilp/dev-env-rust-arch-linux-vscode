@@ -22,3 +22,17 @@ The set up is built with the following tool chains in mind and supports cross-co
 * `aarch64-unknown-linux-musl`
 
 You should set the active tool chain to the one matching your platform.
+
+## Selecting tool chain and build target
+
+You can select your toolchain using the `RUSTUP_TOOLCHAIN` variable, e.g.:
+
+```shell
+RUSTUP_TOOLCHAIN=1.85 make build
+```
+
+You set the build target using `CARGO_BUILD_TARGET` variable, e.g.:
+
+```shell
+CARGO_BUILD_TARGET=x86_64-unknown-linux-musl make build
+```
