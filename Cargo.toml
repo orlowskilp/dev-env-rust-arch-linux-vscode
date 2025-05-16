@@ -1,7 +1,9 @@
 [package]
 name = "dev-env-rust-arch-linux-vscode"
-version = "0.1.0"
-authors = ["Lukasz Orlowski <orlowskilp@gmail.com>"]
-edition = "2021"
+version = "0.4.0"
+authors = ["Lukasz Orlowski <lukasz@orlowski.io"]
+edition = "2024"
 
 [dependencies]
+
+[dev-dependencies]
