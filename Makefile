@@ -48,6 +48,7 @@ integration-test:
 .PHONY: format
 format:
 	cargo fmt
+	dprint fmt
 
 # Lint codebase
 .PHONY: lint
