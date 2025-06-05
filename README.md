@@ -9,18 +9,18 @@ This template provides a Rust development environment for Visual Studio Code. Th
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/)
 2. Install [Docker](https://www.docker.com/)
-3. In VSCode go to *Extensions* and install the *Dev Containers* extension
+3. In VSCode go to _Extensions_ and install the _Dev Containers_ extension
 4. Open the project directory (the one with `.devcontainer` subdirectory in it)
-5. VSCode will prompt you to reopen the folder in container. Alternatively you can go to *View > Commands Palette* and look up *Open Folder in Container*
+5. VSCode will prompt you to reopen the folder in container. Alternatively you can go to _View > Commands Palette_ and look up _Open Folder in Container_
 
 ## Tool Chains
 
 The set up is built with the following tool chains in mind and supports cross-compilation:
 
-* `x86_64-unknown-linux-gnu`
-* `x86_64-unknown-linux-musl`
-* `aarch64-unknown-linux-gnu`
-* `aarch64-unknown-linux-musl`
+- `x86_64-unknown-linux-gnu`
+- `x86_64-unknown-linux-musl`
+- `aarch64-unknown-linux-gnu`
+- `aarch64-unknown-linux-musl`
 
 You should set the active tool chain to the one matching your platform.
 
